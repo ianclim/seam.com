@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "72ebe91acb098acb6960e262e1c51cba",
+    "revision": "bf03a0c63b88f344c2892b5d960c62db",
     "url": "/seam.com/index.html"
   },
   {
-    "revision": "0798d08767b649f8099b",
+    "revision": "a2886735f1031c6692c6",
     "url": "/seam.com/static/css/2.3a395901.chunk.css"
   },
   {
-    "revision": "e1acfa6410f0e9950289",
+    "revision": "6458c86e9535b4a7ed3f",
     "url": "/seam.com/static/css/main.00770f9f.chunk.css"
   },
   {
-    "revision": "0798d08767b649f8099b",
-    "url": "/seam.com/static/js/2.1cd8c5cf.chunk.js"
+    "revision": "a2886735f1031c6692c6",
+    "url": "/seam.com/static/js/2.5c2ebf01.chunk.js"
   },
   {
     "revision": "0fd07708345db41e7462430257b87932",
-    "url": "/seam.com/static/js/2.1cd8c5cf.chunk.js.LICENSE.txt"
+    "url": "/seam.com/static/js/2.5c2ebf01.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e1acfa6410f0e9950289",
-    "url": "/seam.com/static/js/main.a24b559b.chunk.js"
+    "revision": "6458c86e9535b4a7ed3f",
+    "url": "/seam.com/static/js/main.c108aebc.chunk.js"
   },
   {
     "revision": "8b6c041255f62ea0cde3",
@@ -92,8 +92,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/seam.com/static/media/live-stream-icon.df5ff1de.svg"
   },
   {
-    "revision": "f9776f55173cd40b2b3f3fed1c7443c4",
-    "url": "/seam.com/static/media/logo.f9776f55.svg"
+    "revision": "37a46980c57a4abbd7ac84877cb2391e",
+    "url": "/seam.com/static/media/logo.37a46980.svg"
   },
   {
     "revision": "a47dacaf9ce8a8cb92f54b8bff5febe5",

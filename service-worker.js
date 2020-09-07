@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/seam.com/precache-manifest.fcc26b8c6383fd33dcf77d557f87b04d.js"
+  "/seam.com/precache-manifest.e5587e4e36ae702f127d57da29d5198a.js"
 );
 
 self.addEventListener('message', (event) => {
