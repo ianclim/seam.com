@@ -57,19 +57,19 @@ export default ({
       imageSrc: DistributionImage,
       title: "Direct distribution to shoppers",
       description: "Streamlined communication and immediate product feedback.",
-      url: "https://timerse.com"
+      url: "https://useseam.com/contact"
     },
     {
       imageSrc: ShoppingBagImage,
       title: "Virtual dressing room for your clothes",
       description: "Try on your clothes in 3D from anywhere",
-      url: "https://google.com"
+      url: "https://useseam.com/contact"
     },
     {
       imageSrc: CustomizeIconImage,
       title: "Aggregated shopper demand",
       description: "Increased brand awareness and group buying network effects.",
-      url: "https://reddit.com"
+      url: "https://useseam.com/contact"
     }
   ],
   linkText = "Learn More",
