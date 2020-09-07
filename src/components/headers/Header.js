@@ -7,6 +7,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const Header = tw.header`
   flex justify-between items-center
@@ -54,11 +55,11 @@ export const DesktopNavLinks = tw.nav`
 export default ({ roundedHeaderButton = false, logoLink, links, className, collapseBreakpointClass = "lg" }) => {
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="/about">About</NavLink>
-      <NavLink href="/partnerships">Partnerships</NavLink>
-      <NavLink href="/faq">FAQ</NavLink>
-      <NavLink href="/contact">Contact Us</NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/signup">Sign Up</PrimaryLink>
+      <Link to="/about" style={{ marginRight: 25, fontWeight: 'bold' }}>About</Link>
+      <Link to="/partnerships" style={{ marginRight: 25, fontWeight: 'bold' }}>Partnerships</Link>
+      <Link to="/faq" style={{ marginRight: 25, fontWeight: 'bold' }}>FAQ</Link>
+      <Link to="/contact" style={{ marginRight: 25, fontWeight: 'bold' }}>Contact Us</Link>
+      <Link to="/signup" style={{ fontWeight: 'bold'}}>Sign Up</Link>
     </NavLinks>
   ];
 
