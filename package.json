@@ -1,7 +1,7 @@
 {
   "name": "Seam",
   "version": "0.1.0",
-  "homepage": "http://ianclim.github.io/seam.com",
+  "homepage": "https://useseam.com/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
