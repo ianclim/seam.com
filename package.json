@@ -1,6 +1,7 @@
 {
-  "name": "treact",
+  "name": "Seam",
   "version": "0.1.0",
+  "homepage": "http://ianclim.github.io/seam.com",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -9,6 +10,7 @@
     "feather-icons": "^4.26.0",
     "firebase": "^7.19.1",
     "framer-motion": "^1.10.2",
+    "gh-pages": "^3.1.0",
     "react": "^16.13.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.13.1",
@@ -27,6 +29,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
