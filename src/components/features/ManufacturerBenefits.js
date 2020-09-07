@@ -9,7 +9,6 @@ import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg";
 import CustomizeIconImage from "images/customize-icon.svg";
 import DistributionImage from "images/distribution-icon.svg";
 import ShoppingBagImage from "images/shopping-bag-icon.svg";
-
 import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
 
 const Heading = tw(SectionHeading)``;
@@ -78,13 +77,7 @@ export default ({
   imageContainerCss = null,
   imageCss = null
 }) => {
-  /*
-   * This componets accepts a prop - `cards` which is an array of object denoting the cards. Each object in the cards array can have the following keys (Change it according to your need, you can also add more objects to have more cards in this feature component):
-   *  1) imageSrc - the image shown at the top of the card
-   *  2) title - the title of the card
-   *  3) description - the description of the card
-   *  4) url - the url that the card should goto on click
-   */
+
   return (
     <Container>
       <ContentWithPaddingXl>

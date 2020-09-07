@@ -51,7 +51,6 @@ export default ({
 
   return (
     <AnimationRevealPage disabled>
-
     <Container >
       <Header />
       <TextColumn>

@@ -4,12 +4,10 @@ import tw from "twin.macro";
 //eslint-disable-next-line
 import { css } from "styled-components/macro";
 import firebase from '../../Firebase.js'
-
 import Header from "../headers/Header.js";
-
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
 import DesignIllustration from "../../images/design-illustration-2.svg";
-import CustomersLogoStripImage from "../../images/customers-logo-strip.png";
+import { useAlert } from 'react-alert'
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -48,18 +46,24 @@ const CustomersLogoStrip = styled.div`
   }
 `;
 
+
 export default ({ roundedHeaderButton }) => {
   const [email, setEmail] = useState("Your Email Address");
+  const alert = useAlert();
 
   function joinWaitlist() {
-    const db = firebase.firestore();
+    if (email === "" || email === "Your Email Address") {
+      alert.show('Please enter a valid email address');
+      return
+    }
 
+    const db = firebase.firestore();
     const form = {
       email: email
     }
 
     db.collection("shoppers").add({ form }).then((docref) => {
-      setEmail("");
+      alert.show("You're on the waitlist! Thanks for supporting us - we'll let you know when we launch.")
     })
       .catch((error) => {
         console.error('error', error)

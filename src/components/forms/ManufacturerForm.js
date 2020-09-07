@@ -6,6 +6,7 @@ import { SectionHeading, Subheading as SubheadingBase } from "components/misc/He
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import EmailIllustrationSrc from "images/email-illustration.svg";
 import firebase from '../../Firebase.js'
+import { useAlert } from 'react-alert'
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-5`;
@@ -50,9 +51,20 @@ export default ({
   const [company, setCompany] = useState("Company Name");
   const [website, setWebsite] = useState("Company website");
   const [message, setMessage] = useState("Why you're interested in partnering:");
+  const alert = useAlert();
 
   function handleSubmit() {
-    console.log('hello')
+    // Website and message can be optional 
+    if (email === "" || email === "Your Email Address") {
+      alert.show('Please enter a valid email address');
+      return
+    } else if (name === "" || name === "Full Name") {
+      alert.show('Please enter your name');
+      return
+    } else if (company === "" || company === "Company Name") {
+      alert.show("Please enter your company's name");
+      return 
+    }
 
     const db = firebase.firestore();
 
@@ -65,7 +77,7 @@ export default ({
     }
 
     db.collection("manufacturers").add({ form }).then((docref) => {
-      console.log('document written', docref.id);
+      alert.show("Thanks for your interest in partering! We'll reach out to you shortly. Please email us with any questions in the meantime.")
     })
       .catch((error) => {
         console.error('error', error)

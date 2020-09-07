@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import tw from "twin.macro";
-import {ReactComponent as EmailNewsletterIconBase } from "../../images/email-newsletter-icon.svg"
-import {Container as ContainerBase } from "components/misc/Layouts.js"
-import {SectionHeading} from "components/misc/Headings.js";
-import {PrimaryButton} from "components/misc/Buttons.js";
-
+import { ReactComponent as EmailNewsletterIconBase } from "../../images/email-newsletter-icon.svg"
+import { Container as ContainerBase } from "components/misc/Layouts.js"
+import { SectionHeading } from "components/misc/Headings.js";
+import { PrimaryButton } from "components/misc/Buttons.js";
+import { useAlert } from 'react-alert'
+import firebase from '../../Firebase.js'
 
 const Container = tw(ContainerBase)`-mx-8`
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
@@ -20,10 +21,32 @@ const Description = tw.p`text-black font-medium text-sm max-w-sm mt-2 sm:mt-1 te
 
 const Form = tw.form`text-sm max-w-sm sm:max-w-none mx-auto`
 const Input = tw.input`w-full sm:w-auto block sm:inline-block px-6 py-4 rounded bg-secondary-600 tracking-wider font-bold border border-secondary-600 focus:border-secondary-300 focus:outline-none sm:rounded-r-none hover:bg-secondary-500 transition duration-300 text-white`
-const Button = tw(PrimaryButton)`w-full sm:w-auto mt-6 sm:mt-0 sm:rounded-l-none py-4 bg-primary-500 text-white hocus:bg-primary-700 hocus:text-white border border-primary-500 hocus:border-primary-700`
 
 
 export default () => {
+  const [email, setEmail] = useState("Your Email Address");
+  const alert = useAlert();
+
+  function joinWaitlist() {
+    if (email === "" || email === "Your Email Address") {
+      alert.show('Please enter a valid email address');
+      return
+    }
+
+    const db = firebase.firestore();
+    const form = {
+      email: email
+    }
+
+    db.collection("shoppers").add({ form }).then((docref) => {
+      alert.show("You're on the waitlist! Thanks for supporting us - we'll let you know when we launch.")
+    })
+      .catch((error) => {
+        console.error('error', error)
+      })
+  }
+
+
   return (
     <Container>
       <Content>
@@ -36,10 +59,10 @@ export default () => {
             </HeadingInfoContainer>
           </TextColumn>
           <FormColumn>
-          <Form>
-            <Input name="waitlist" type="email" placeholder="Your Email Address" />
-            <Button type="submit">Join waitlist</Button>
-          </Form>
+            <Form>
+              <Input name="waitlist" type="email" placeholder={email} onChange={event => setEmail(event.target.value)}/>
+              <button type="submit" onClick={joinWaitlist} style={{ marginTop: 25, width: 135, height: 55, backgroundColor: '#7b00ff', color: 'white', fontWeight: 'bold'}}>Join waitlist</button>
+            </Form>
           </FormColumn>
         </Row>
       </Content>
