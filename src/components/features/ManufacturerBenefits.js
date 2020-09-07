@@ -69,10 +69,9 @@ export default ({
       imageSrc: CustomizeIconImage,
       title: "Aggregated shopper demand",
       description: "Increased brand awareness and group buying network effects.",
-      url: "https://useseam.com/contact"
+      url: ""
     }
   ],
-  linkText = "Learn More",
   heading = "",
   subheading = "",
   description = "",
@@ -95,18 +94,12 @@ export default ({
         <ThreeColumnContainer>
           {cards.map((card, i) => (
             <Column key={i}>
-              <Card href={card.url}>
+              <Card>
                 <span className="imageContainer" css={imageContainerCss}>
                   <img src={card.imageSrc} alt="" css={imageCss} />
                 </span>
                 <span className="title">{card.title}</span>
                 <p className="description">{card.description}</p>
-                {linkText && (
-                  <span className="link">
-                    <span>{linkText}</span>
-                    <ArrowRightIcon className="icon" />
-                  </span>
-                )}
               </Card>
             </Column>
           ))}
