@@ -17,7 +17,7 @@ const RightColumn = tw.div`relative mt-12 lg:mt-0 flex-1 flex flex-col justify-c
 const Heading = tw.h1`font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-900 leading-tight`;
 const Paragraph = tw.p`my-5 lg:my-8 text-base xl:text-lg`;
 const SubTitle = tw.p`text-base xl:text-2xl font-bold`;
-const SubTitleButton = tw.p`text-gray-100 font-bold mr-2 my-4 sm:my-2 flex items-center justify-center text-base`;
+const SubTitleButton = tw.p`text-gray-100 font-bold flex items-center justify-center text-base`;
 
 const Actions = styled.div`
   ${tw`relative max-w-md text-center mx-auto lg:mx-0`}
@@ -92,7 +92,7 @@ export default ({ roundedHeaderButton }) => {
             <SubTitle>
               Clothing manufacturer? <span> </span>
                 <button onClick={joinWaitlist} type="submit" style={{ marginTop: 25, width: 135, height: 45, backgroundColor: '#7b00ff', color: 'white', borderRadius: 50 }}>
-                <SubTitleButton>&nbsp;&nbsp;Learn more</SubTitleButton>
+                <SubTitleButton>Learn more</SubTitleButton>
               </button>
             </SubTitle>
           </LeftColumn>
