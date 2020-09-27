@@ -53,15 +53,7 @@ export const DesktopNavLinks = tw.nav`
 `;
 
 export default ({ roundedHeaderButton = false, logoLink, links, className, collapseBreakpointClass = "lg" }) => {
-  const defaultLinks = [
-    <NavLinks key={1}>
-      <Link to="/about" style={{ marginRight: 25, fontWeight: 'bold' }}>About</Link>
-      <Link to="/partnerships" style={{ marginRight: 25, fontWeight: 'bold' }}>Partnerships</Link>
-      <Link to="/faq" style={{ marginRight: 25, fontWeight: 'bold' }}>FAQ</Link>
-      <Link to="/contact" style={{ marginRight: 25, fontWeight: 'bold' }}>Contact Us</Link>
-      <Link to="/signup" style={{ fontWeight: 'bold'}}>Sign Up</Link>
-    </NavLinks>
-  ];
+  const defaultLinks = [];
 
   const { showNavLinks, animation, toggleNavbar } = useAnimatedNavToggler();
   const collapseBreakpointCss = collapseBreakPointCssMap[collapseBreakpointClass];
@@ -117,3 +109,15 @@ const collapseBreakPointCssMap = {
     mobileNavLinksContainer: tw`lg:hidden`
   }
 };
+
+/* 
+const defaultLinks = [
+    <NavLinks key={1}>
+      <Link to="/about" style={{ marginRight: 25, fontWeight: 'bold' }}>About</Link>
+      <Link to="/partnerships" style={{ marginRight: 25, fontWeight: 'bold' }}>Partnerships</Link>
+      <Link to="/faq" style={{ marginRight: 25, fontWeight: 'bold' }}>FAQ</Link>
+      <Link to="/contact" style={{ marginRight: 25, fontWeight: 'bold' }}>Contact Us</Link>
+      <Link to="/signup" style={{ fontWeight: 'bold'}}>Sign Up</Link>
+    </NavLinks>
+  ]
+*/

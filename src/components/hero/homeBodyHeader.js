@@ -77,10 +77,10 @@ export default ({ roundedHeaderButton }) => {
         <TwoColumn>
           <LeftColumn>
             <Heading>
-              Making online shopping <span tw="text-primary-500">fun.</span>
+              A virtual dressing room for <span tw="text-primary-500">everyone.</span>
             </Heading>
             <Paragraph>
-              Talk with your friends, designers, influencers, or brands while you shop, try on, and share clothes.
+              Allow your customers to try on any of your clothes anywhere from their phone or computer. 
             </Paragraph>
             <Actions>
               <input type="text" placeholder={email} onChange={event => setEmail(event.target.value)} />
@@ -89,12 +89,6 @@ export default ({ roundedHeaderButton }) => {
             <Paragraph>
               {"\n"}
             </Paragraph>
-            <SubTitle>
-              Clothing manufacturer? <span> </span>
-                <button onClick={joinWaitlist} type="submit" style={{ marginTop: 25, width: 135, height: 45, backgroundColor: '#7b00ff', color: 'white', borderRadius: 50 }}>
-                <SubTitleButton>Learn more</SubTitleButton>
-              </button>
-            </SubTitle>
           </LeftColumn>
           <RightColumn>
             <IllustrationContainer>

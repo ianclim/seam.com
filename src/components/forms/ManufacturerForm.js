@@ -37,8 +37,8 @@ const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8`
 
 export default ({
   subheading = "Contact Us",
-  heading = <>Interested? <span tw="text-primary-500">Get in touch</span><wbr /> with us!</>,
-  description = "We're looking to closely work with clothing manufacturers to not only supply our inventory but to also be the first content creators — short form video and live streams — on our platform. If this sounds interesting to you, we'd love to work with you!",
+  heading = <>Looking to learn more?<br></br><span tw="text-primary-500">Get in touch!</span><wbr /></>,
+  description = "If you're looking to integrate our virtual dressing room into your website or app, we'd love to hear from you!",
   submitButtonText = "Submit",
   formAction = "#",
   formMethod = "get",
@@ -50,7 +50,7 @@ export default ({
   const [name, setName] = useState("Full Name");
   const [company, setCompany] = useState("Company Name");
   const [website, setWebsite] = useState("Company website");
-  const [message, setMessage] = useState("Why you're interested in partnering:");
+  const [message, setMessage] = useState("Why you're interested:");
   const alert = useAlert();
 
   function handleSubmit() {

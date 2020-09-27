@@ -9,6 +9,8 @@ import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg";
 import CustomizeIconImage from "images/customize-icon.svg";
 import DistributionImage from "images/distribution-icon.svg";
 import ShoppingBagImage from "images/shopping-bag-icon.svg";
+import ShirtImage from "images/shirt.svg";
+import CubeImage from "images/cube-transparent.svg";
 import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
 
 const Heading = tw(SectionHeading)``;
@@ -53,27 +55,27 @@ const DecoratorBlob = styled(SvgDecoratorBlob3)`
 export default ({
   cards = [
     {
-      imageSrc: DistributionImage,
-      title: "Direct distribution to shoppers",
-      description: "Streamlined communication and immediate product feedback.",
-      url: "https://useseam.com/contact"
+      imageSrc: ShirtImage,
+      title: "Create any article of clothing",
+      description: "Easy to use editor to create your custom pieces of clothing.",
+      url: ""
     },
     {
       imageSrc: ShoppingBagImage,
-      title: "Virtual dressing room for your clothes",
-      description: "Try on your clothes in 3D from anywhere",
-      url: "https://useseam.com/contact"
+      title: "Embed directly into advertisements",
+      description: "Enable customers to try on your clothes on any social media platform.",
+      url: ""
     },
     {
-      imageSrc: CustomizeIconImage,
-      title: "Aggregated shopper demand",
-      description: "Increased brand awareness and group buying network effects.",
+      imageSrc: CubeImage,
+      title: "Easily integrate into your website or app",
+      description: "Customize to your requirements and integrate directly into your existing website or app.",
       url: ""
     }
   ],
-  heading = "",
+  heading = "Features",
   subheading = "",
-  description = "",
+  description = "Upgrade your virtual shopping experience.",
   imageContainerCss = null,
   imageCss = null
 }) => {

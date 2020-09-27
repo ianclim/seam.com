@@ -36,11 +36,7 @@ export default () => {
             <LogoText>Seam</LogoText>
           </LogoContainer>
           <LinksContainer >
-            <Link to="/" style={{marginRight: 15}}>Home</Link>
-            <Link to="/about" style={{marginRight: 15}}>About</Link>
-            <Link to="/partnerships" style={{marginRight: 15}}>Partnerships</Link>
-            <Link to="/faq" style={{marginRight: 15}}>FAQ</Link>
-            <Link to="/contact" style={{marginRight: 15}}>Contact Us</Link>
+            <Link to="/" >Home</Link>
           </LinksContainer>
           <CopyrightText>
             &copy; Seam
@@ -50,3 +46,10 @@ export default () => {
     </Container>
   );
 };
+
+/*
+            <Link to="/about" style={{marginRight: 15}}>About</Link>
+            <Link to="/partnerships" style={{marginRight: 15}}>Partnerships</Link>
+            <Link to="/faq" style={{marginRight: 15}}>FAQ</Link>
+            <Link to="/contact" style={{marginRight: 15}}>Contact Us</Link>
+*/

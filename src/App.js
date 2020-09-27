@@ -16,6 +16,15 @@ import SignUp from "pages/SignUp";
 export default function App() {
   return (
     <Router>
+      <Route path="/">
+        <Home />
+      </Route>
+    </Router>
+  );
+}
+
+/*
+    <Router>
       <Switch>
         <Route path="/about">
           <AboutUs />
@@ -41,5 +50,4 @@ export default function App() {
         </Route>
       </Switch>
     </Router>
-  );
-}
+*/
